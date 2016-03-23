@@ -56,7 +56,6 @@ SELECT
   ELSE 'direct non-homepage'
   END AS segment,
 
- 
 case when lower(subchannel)  = 'affiliate external'
     or lower(subchannel)  = 'affiliate internal'
     or lower(subchannel)  = 'digital video'
