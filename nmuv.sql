@@ -50,7 +50,7 @@ SELECT
     OR lower(fv.visitreferrer) LIKE '%ancestry.fr%'
     THEN 'geo-redirect'
   WHEN fv.visitreferrer != '0'THEN 'external referrals'
-  WHEN ep.entrypagecategorydescription IN ('Logged in HomePage', 'Loggged Out HomePage')
+  WHEN ep.entrypagecategorydescription IN ('Logged in HomePage', 'Logged Out HomePage')
     OR len(fv.pageurl) - len(replace(fv.pageurl, '/', '')) < 4
     THEN 'direct homepage'
   ELSE 'direct non-homepage'
@@ -77,7 +77,7 @@ case when lower(subchannel)  = 'affiliate external'
     then 'referrals'          
   when (segment = 'direct homepage'
     or segment = 'organic brand'
-    or lower(subchannel)  = 'paid search – brand'
+    or lower(subchannel)  = 'paid search â€“ brand'
     or lower(subchannel) = 'direct'
     or lower(subchannel)  = 'tv'
     or lower(subchannel)  = 'tv brand/pr'
@@ -94,7 +94,7 @@ case when lower(subchannel)  = 'affiliate external'
     or lower(subchannel)  = 'radio brand/pr')
     then 'brand'
   when (segment = 'organic nonbrand'
-     or lower(subchannel)  = 'paid search – nonbrand'
+     or lower(subchannel)  = 'paid search â€“ nonbrand'
      or lower(segment) = 'unknown'
      or lower(subchannel)  = 'search')
      then 'search engine non-brand' 
