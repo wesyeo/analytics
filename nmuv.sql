@@ -5,7 +5,7 @@ SELECT
     OR lower(subchannel) = 'content marketing'
     THEN 'content marketing'
   WHEN lower(pr.subchannel) != 'unknown' THEN pr.subchannel
-  WHEN lower(fv.visitreferrer) LIKE '%google.%'-- Organic search
+  WHEN lower(fv.visitreferrer) LIKE '%google.%'-- Organic search!
     OR lower(fv.visitreferrer) LIKE '%bing.%'
     OR lower(fv.visitreferrer) LIKE '%yahoo.%'
     OR lower(fv.visitreferrer) LIKE '%xfinity.%'
